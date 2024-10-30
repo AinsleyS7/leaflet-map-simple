@@ -19,7 +19,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Ainsley's sample map </div>
+  <div id="map-title">Ainsley's map </div>
   <div id="map"></div>
 
   <!-- Create the interactive map content with JavaScript (.js) -->
@@ -34,16 +34,19 @@
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(
-    'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data: &copy; <a href="&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
+ L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+    
   L.marker([41.74, -72.69]).addTo(map) // EDIT marker coordinates
   .bindPopup("Trinity College"); // EDIT pop-up text message
 
-      L.marker([41.81, -72.24]).addTo(map) // EDIT marker coordinates
-  .bindPopup("UConn"); // EDIT pop-up text message
+     L.marker([41.31, -72.92]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Yale University"); // EDIT pop-up text message
 
   </script>
 </body>
